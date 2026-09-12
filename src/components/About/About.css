@@ -1,0 +1,198 @@
+
+.about {
+  width: 100%;
+  padding: 100px 20px;
+
+  box-sizing: border-box;
+
+  background: #0b0b0f;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle purple glow */
+.about::before {
+  content: "";
+
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: rgba(168, 85, 247, 0.08);
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  top: 50%;
+  right: -100px;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+}
+
+.about-content {
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Section label */
+.section-label {
+  color: #a855f7;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  margin: 0 0 10px;
+}
+
+/* About heading */
+.about-title {
+  color: #f8fafc;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+
+  margin: 0 0 25px;
+
+  line-height: 1.2;
+}
+
+/* About paragraphs */
+.about-description {
+  max-width: 800px;
+
+  margin: 0 auto 15px;
+
+  color: #9ca3af;
+
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Information cards */
+.about-info {
+  display: flex;
+
+  justify-content: center;
+  align-items: stretch;
+
+  gap: 25px;
+
+  margin-top: 40px;
+}
+
+.info-item {
+  flex: 1;
+
+  padding: 25px;
+
+  background: linear-gradient(
+    145deg,
+    #111116,
+    #0d0d12
+  );
+
+  border: 1px solid #27272a;
+
+  border-radius: 12px;
+
+  text-align: center;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.08);
+}
+
+/* Purple accent at the top */
+.info-accent {
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin: 0 auto 20px;
+
+  background: #a855f7;
+
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+}
+
+/* Card heading */
+.info-item h3 {
+  color: #a855f7;
+
+  font-size: 20px;
+  font-weight: 600;
+
+  margin: 0 0 12px;
+}
+
+/* Card description */
+.info-description {
+  color: #9ca3af;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  margin: 0;
+}
+
+/* Card hover */
+.info-item:hover {
+  transform: translateY(-5px);
+
+  border-color: #a855f7;
+
+  box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about {
+    padding: 70px 20px;
+  }
+
+  .about-title {
+    font-size: 34px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .about-info {
+    flex-direction: column;
+
+    gap: 16px;
+
+    margin-top: 35px;
+  }
+
+  .info-item {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+}
+

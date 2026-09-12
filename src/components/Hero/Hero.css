@@ -1,0 +1,171 @@
+
+.hero {
+  min-height: 80vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple background glow */
+.hero::before {
+  content: "";
+
+  position: absolute;
+  width: 400px;
+  height: 400px;
+
+  background: rgba(168, 85, 247, 0.12);
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  top: 20%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
+
+/* Hero content */
+.hero-content {
+  max-width: 700px;
+
+  text-align: center;
+  padding: 20px;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* Small introduction */
+.hero-intro {
+  color: #a855f7;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  margin-bottom: 10px;
+}
+
+/* Main heading */
+.hero-title {
+  color: #f8fafc;
+
+  font-size: 56px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+  line-height: 1.1;
+
+  margin: 0;
+}
+
+/* Description */
+.hero-description {
+  max-width: 650px;
+
+  margin: 20px auto 30px;
+
+  color: #9ca3af;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Buttons container */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Primary button */
+.primary-btn {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background: #a855f7;
+  color: #0b0b0f;
+
+  text-decoration: none;
+
+  border: 1px solid #a855f7;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  background: #9333ea;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.25);
+}
+
+/* Secondary button */
+.secondary-btn {
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  background: transparent;
+  color: #f8fafc;
+
+  text-decoration: none;
+
+  border: 1px solid #a855f7;
+  border-radius: 8px;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #a855f7;
+  color: #0b0b0f;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.20);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 75vh;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+
+  .hero-title {
+    font-size: 40px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
